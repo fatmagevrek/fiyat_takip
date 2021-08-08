@@ -50,7 +50,7 @@ def checkPrice(url,paramPrice):
             """.format(productTitle, image, url)
         sendMail(" """gonderen e-mail """","Ürünün fiyatı düştü👍👍", htmlEmailContent)
     else:
-        print("ürün fiyatı degismedi")
+        print("ürün fiyatı degismedi") 
     
       
     
