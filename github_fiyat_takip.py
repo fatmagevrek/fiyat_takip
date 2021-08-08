@@ -30,7 +30,7 @@ def checkPrice(url,paramPrice):
 
     price = htmlPage.find("span",class_="prc-slg").getText()
 
-    image = htmlPage.find("img", class_="ph-gl-img")    #get text kullanmaadan fotograf olarak gonderebiliyoruz
+    image = htmlPage.find("img", class_="ph-gl-img")    #get text kullanmadan fotograf olarak gonderebiliyoruz.
 
     convertedPrice = float(price.replace(",",".").replace(" TL",""))
 
@@ -55,12 +55,12 @@ def checkPrice(url,paramPrice):
       
     
     
-checkPrice(url1, 1000)   # şimdilik denerken kullandım. Dongu seklinde tekrarlanması istenirse=>
+checkPrice(url1, 1000)   # simdilik denerken kullandım. Dongu seklinde tekrarlanması istenirse=>
 """
 #sonsuz döngüde kontrol etmesi için
 while(True):
     checkPrice(url1,1000)
-    time.sleep(15)       #60 saniyede bir çalışır
+    time.sleep(15)       #15 saniyede bir çalışır
     
     """
 
@@ -84,7 +84,7 @@ def sendMail(toMail, subject, content):     # def ile method tanımlıyoruz (bu 
     server.login(fromMail, " """gonderen e-mail sifresi """ ")     #eposta bilgileri girilir mail + sifre
     
 
-    message = MIMEMultipart('alternative')     #fotoğrafı da göstermek için mime olarak belirtmek gerekir
+    message = MIMEMultipart('alternative')     #fotografı da göstermek için 'mime' olarak belirtmek gerekir
     #içine alternative yazılır, html belgesi gndermek için gerekli
     
     message['Subject']= subject    #mesaj degiskeninde konusunu subject olarak belirtiyoruz
